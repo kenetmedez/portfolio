@@ -62,9 +62,10 @@ const Navigation = () => {
               </Link>
             </li>
           </ul>
-          <div className="absolute top-8 right-5 lg:hidden md:flex rounded cursor-pointer hover:bg-[#f1dfb8]  z-100">
+
+          <div className="absolute top-5 right-5 lg:hidden md:flex rounded cursor-pointer hover:bg-[#f1dfb8] z-100">
             <Image
-              src={"/humberger.png"}
+              src={"/menu.png"}
               alt="humberger"
               width={40}
               height={40}

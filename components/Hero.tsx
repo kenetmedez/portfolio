@@ -4,26 +4,28 @@ import Social from "./Social";
 
 const Hero = () => {
   return (
-    <section className="relative pt-20 gap-x-2 w-full h-screen flex lg:flex-row md:flex-row lg:justify-center items-center flex-col justify-start bg-[#f0a900]">
+    <section className="relative lg:pt-20 lg:gap-x-2 w-full lg:h-screen flex lg:flex-row md:flex-row lg:justify-center items-center flex-col justify-start bg-[#fff]">
+    {/* <section className="relative lg:pt-20 lg:gap-x-2 w-full lg:h-screen flex lg:flex-row md:flex-row lg:justify-center items-center flex-col justify-start bg-[#f0a900]"> */}
       <div className="relative lg:w-1/2 flex flex-col justify-end items-center gap-y-2">
         <Image
           src="/header-image.png"
           alt="profile picture"
           width={600}
           height={100}
-          className="relative object-cover w-3/5 md:translate-x-20"
+          className="relative object-cover w-3/5 lg:translate-x-20"
         />
         <Social />
       </div>
 
       <div className="lg:w-1/2 w-full flex flex-col lg:justify-items-end justify-center lg:p-0 px-5">
-        <h3 className="text-white lg:text-4xl text-lg duration-500 font-bold font-poppins">
+        <h3 className="text-[#f0a900] lg:text-4xl text-lg duration-500 font-bold font-poppins">
           I AM A
         </h3>
-        <h1 className="text-white lg:text-6xl md:text-5xl text-4xl duration-500 font-bold font-poppins animate-pulse">
+        <h1 className="text-[#f0a900] lg:text-6xl md:text-5xl text-4xl duration-500 font-bold font-poppins animate-pulse">
           WEB DEVELOPER
         </h1>
-        <p className="lg:pt-5 pt-3 text-justify font-poppins text-xs max-w-2xl lg:pr-10">
+
+        <p className="lg:pt-5 pt-1 text-justify font-poppins md:text-md text-sm max-w-2xl lg:pr-10">
           I'm Kenet, a skilled and creative Web Developer. I bring ideas to life
           using HTML, CSS, and JavaScript. I stay updated with the latest
           technology like NextJs. I love problem-solving and collaborating with
@@ -32,9 +34,10 @@ const Hero = () => {
           maintenance and updates to keep websites running smoothly. Let's
           create a captivating online experience together!
         </p>
-        <div className="py-5 flex items-center">
-          <button className=" bg-[#CF7500] rounded-full flex flex-row justify-center items-center px-5 py-3 text-white font-bold text-md  hover:bg-[#000] cursor-pointer lg:w-80 md:w-30 w-full group">
-            <p>LET'S COLLABORATE</p>
+
+        <div className="lg:py-5 pt-1 flex items-center">
+          <button className=" bg-[#CF7500] lg:0rounded-full rounded flex flex-row justify-center items-center px-5 py-3 text-white font-bold text-md  hover:bg-[#000] cursor-pointer group">
+            <p className="md:text-md text-sm">LET'S COLLABORATE</p>
             <span className="pl-2 duration-500 group-hover:pl-4">
               <svg
                 id="Layer_1"
