@@ -6,13 +6,13 @@ const Hero = () => {
   return (
     <section className="relative lg:pt-20 lg:gap-x-2 w-full lg:h-screen flex lg:flex-row md:flex-row lg:justify-center items-center flex-col justify-start bg-[#fff]">
     {/* <section className="relative lg:pt-20 lg:gap-x-2 w-full lg:h-screen flex lg:flex-row md:flex-row lg:justify-center items-center flex-col justify-start bg-[#f0a900]"> */}
-      <div className="relative lg:w-1/2 flex flex-col justify-end items-center gap-y-2">
+      <div className="relative lg:w-1/2 flex flex-col lg:justify-end lg:items-end">
         <Image
-          src="/header-image.png"
+          src="/boy-using-laptop.png"
           alt="profile picture"
           width={600}
           height={100}
-          className="relative object-cover w-3/5 lg:translate-x-20"
+          className="relative object-cover w-3/5 lg:mx-0 mx-auto"
         />
         <Social />
       </div>
