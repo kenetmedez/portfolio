@@ -19,20 +19,20 @@ const Hero = () => {
 
       <div className="lg:w-1/2 w-full flex flex-col lg:justify-items-end justify-center lg:p-0 px-5">
         {information?.map((info, idx) => (
-          <div key={idx}>
-            <h3 className="text-[#f0a900] lg:text-4xl text-md font-second duration-500 font-bold font-poppins">
+          <div key={idx} className="w-full relative pr-10">
+            <h3 className="text-[#f0a900] lg:text-xl text-sm font-second font-bold">
               I AM A
             </h3>
-            <h1 className="text-[#f0a900] font-second tracking-widest lg:text-6xl md:text-5xl text-4xl duration-500 font-bold font-poppins animate-pulse">
+            <h1 className="text-[#f0a900] font-second tracking-widest lg:text-6xl md:text-5xl text-4xl duration-500 font-bold animate-pulse">
               {info?.position}
             </h1>
-            <p className="lg:pt-5 pt-1 text-justify font-poppins md:text-md text-sm max-w-2xl lg:pr-10 font-third">
+            <p className="lg:pt-5 text-justify font-poppins md:text-md text-md font-third">
               {info?.description}
             </p>
 
             <div className="lg:py-5 pt-1 flex items-center">
               <button className=" bg-[#CF7500] lg:0rounded-full rounded flex flex-row justify-center items-center px-5 py-3 text-white font-bold text-md  hover:bg-[#000] cursor-pointer group">
-                <p className="md:text-md text-sm font-second tracking-widest">
+                <p className="md:text-md text-md font-second tracking-widest">
                   {info?.buttonLabel}
                 </p>
                 <span className="pl-2 duration-500 group-hover:pl-4">
