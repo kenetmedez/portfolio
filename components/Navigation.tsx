@@ -33,10 +33,10 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="z-50 fixed top-0 w-[100%] max-h-lg h-[10vh] flex lg:flex-row justify-between items-center overflow-hidden bg-[#f0a900] font-poppins shadow-lg">
-        <div className="lg:w-1/2 flex items-center justify-center md:w-3/4 px-5 ">
-          <Link href="/">
-            <h1 className="animate-pulse lg:flex items-center text-2xl text-white font-bold font-papyrus cursor-pointer hover:text-3xl duration-700 p-5">
+      <nav className="z-50 fixed top-0 w-full max-h-lg h-[10vh] flex lg:flex-row justify-between items-center overflow-hidden bg-[#f0a900] font-poppins shadow-lg">
+        <div className="lg:w-3/12 md:mx-auto w-1/2 flex flex-row items-center justify-center px-5 ">
+          <Link href="/" className="flex items-start justify-start">
+            <h1 className="animate-pulse flex flex-row items-center text-2xl text-white font-bold font-papyrus cursor-pointer hover:text-3xl duration-700 p-5">
               <span className="text-[#092635] text-4xl font-second">
                 {`{ }`}{" "}
               </span>{" "}
@@ -46,8 +46,8 @@ const Navigation = () => {
           </Link>
         </div>
 
-        <div className="lg:w-1/2 lg:flex justify-center mx-[10%] md:w-1/4">
-          <ul className="w-full lg:flex items-center font-semibold gap-20 px-10 hidden">
+        <div className="lg:w-9/12 lg:flex justify-center mx-auto">
+          <ul className="w-full lg:flex items-end justify-end font-semibold gap-[2rem] px-10 hidden">
             {navigation?.map((link, idx) => (
               <li className="hover:text-lg duration-700">
                 <a
