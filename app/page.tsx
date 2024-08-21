@@ -1,6 +1,7 @@
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Navigation from "@/components/Navigation";
+import Background from "@/components/Background";
 
 const Home = () => {
 
@@ -9,7 +10,7 @@ const Home = () => {
     id="home">
       <Navigation />
       <Hero />
-      <About />
+      {/* <Background /> */}
     </div>
   );
 };

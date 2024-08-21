@@ -5,7 +5,7 @@ import { information } from "@/lib/hero/hero";
 
 const Hero = () => {
   return (
-    <section className="relative pt-20  pb-2 lg:gap-x-2 w-full flex lg:flex-row md:flex-row lg:justify-center items-center flex-col justify-start bg-gray/100/50">
+    <header className="relative pt-20  pb-2 lg:gap-x-2 w-full flex lg:flex-row md:flex-row lg:justify-center items-center flex-col justify-start bg-gray-100/50">
       <div className="relative lg:w-1/2 flex flex-col lg:justify-end lg:items-end">
         <Image
           src="/boy-using-laptop.png"
@@ -19,17 +19,16 @@ const Hero = () => {
 
       <div className="lg:w-1/2 w-full flex flex-col lg:justify-items-end justify-center lg:p-0 px-5">
         {information?.map((info, idx) => (
-          <div key={idx} className="w-full relative pr-10">
+          <div key={idx} className="w-full relative md:pr-10">
             <h3 className="text-[#f0a900] lg:text-xl text-sm font-second font-bold">
               I AM A
             </h3>
             <h1 className="text-[#f0a900] font-second tracking-widest lg:text-6xl md:text-5xl text-4xl duration-500 font-bold animate-pulse">
               {info?.position}
             </h1>
-            <p className="lg:pt-5 text-justify font-poppins md:text-md text-md font-third">
+            <p className="md:py-4 py-2 text-justify font-poppins md:text-md text-sm font-third">
               {info?.description}
             </p>
-
             <div className="lg:py-5 pt-1 flex items-center">
               <button className=" bg-[#CF7500] lg:0rounded-full rounded flex flex-row justify-center items-center px-5 py-3 text-white font-bold text-md  hover:bg-[#000] cursor-pointer group">
                 <p className="md:text-md text-md font-second tracking-widest">
@@ -52,7 +51,7 @@ const Hero = () => {
           </div>
         ))}
       </div>
-    </section>
+    </header>
   );
 };
 
