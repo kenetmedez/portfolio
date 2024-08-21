@@ -3,7 +3,8 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section className="relative bg-[#f0a900] w-full font-poppins py-10">
+    <section className="relative bg-[#f0a900] w-full font-poppins py-10"
+    id="about">
       <div className="flex justify-start items-start flex-col">
         <h2
           className="font-semibold text-white text-2xl cursor-pointer px-[10%] py-5"

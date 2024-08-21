@@ -7,6 +7,7 @@ import { navigation } from "@/lib/navigation/constants";
 
 const Navigation = () => {
   const [toggleDropdown, setToggleDropdown] = useState(false);
+  const [isLocked, setIsLocked] = useState(false);
 
   function scrollToId(id: string) {
     const element = document.getElementById(id);
@@ -14,6 +15,21 @@ const Navigation = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   }
+  
+
+  function toggleScrollLock(lock: any) {
+    if (lock) {
+      document.body.style.overflow = "hidden"; // Locks the scroll
+    } else {
+      document.body.style.overflow = ""; // Unlocks the scroll
+    }
+  }
+
+  const handleToggle = () => {
+    const shouldLock = !isLocked;
+    toggleScrollLock(shouldLock);
+    setIsLocked(shouldLock);
+  };
 
   return (
     <>
@@ -21,7 +37,10 @@ const Navigation = () => {
         <div className="lg:w-1/2 flex items-center justify-center md:w-3/4 px-5 ">
           <Link href="/">
             <h1 className="animate-pulse lg:flex items-center text-2xl text-white font-bold font-papyrus cursor-pointer hover:text-3xl duration-700 p-5">
-              <span className="text-[#092635] text-4xl font-second">{`{ }`} </span> KENE
+              <span className="text-[#092635] text-4xl font-second">
+                {`{ }`}{" "}
+              </span>{" "}
+              KENE
               <span className="text-[#092635] font-second">Tech</span>
             </h1>
           </Link>
@@ -44,7 +63,6 @@ const Navigation = () => {
                 </a>
               </li>
             ))}
-
           </ul>
 
           <div className="absolute top-5 right-5 lg:hidden md:flex rounded cursor-pointer hover:bg-[#f1dfb8] z-100">
@@ -67,61 +85,27 @@ const Navigation = () => {
       </nav>
 
       {toggleDropdown && (
-        <div className="z-50 absolute top-0 rounded lg:hidden w-full h-full bg-[#f0a900] sm:flex flex-col items-center justify-center p-10 sm:flex-wrap">
-          <ul className="w-full flex flex-col items-center font-semibold gap-10">
-            <li className="hover:text-lg duration-700">
-              <a
-                key="about"
-                href="#about"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToId("about");
-                  setToggleDropdown((prev) => !prev);
-                }}
-                className="relative cursor-pointer after:block after:content-[''] after:absolute after:h-[3px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
-              >
-                ABOUT
-              </a>
-            </li>
-
-            <li className="hover:text-lg duration-700">
-              <a
-                key="experience"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToId("experience");
-                  setToggleDropdown((prev) => !prev);
-                }}
-                href="#experience"
-                className=" relative cursor-pointer after:block after:content-[''] after:absolute after:h-[3px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center "
-              >
-                EXPERIENCE
-              </a>
-            </li>
-
-            <li className="hover:text-lg duration-700">
-              <Link
-                onClick={() => {
-                  setToggleDropdown((prev) => !prev);
-                }}
-                href="#projects"
-                className=" relative cursor-pointer after:block after:content-[''] after:absolute after:h-[3px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
-              >
-                PROJECTS
-              </Link>
-            </li>
-
-            <li className="hover:text-lg duration-700">
-              <Link
-                onClick={() => {
-                  setToggleDropdown((prev) => !prev);
-                }}
-                href="#contacts"
-                className="relative cursor-pointer after:block after:content-[''] after:absolute after:h-[3px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
-              >
-                CONTACTS
-              </Link>
-            </li>
+        <div className="z-50 absolute top-0 left-0 rounded lg:hidden flex w-full h-full bg-[#f0a900]"
+        onClick={handleToggle}
+        >
+          <ul className="w-full p-5 h-screen flex flex-col items-center justify-center font-semibold gap-10">
+            {navigation?.map((link, idx) => (
+              <li className="hover:text-lg duration-700">
+                <a
+                  key={link?.title}
+                  href={`#${link?.title}`}
+                  className="relative uppercase cursor-pointer after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center font-second tracking-[10px]"
+                  onClick={(e) => {
+                    setToggleDropdown((prev => (!prev)))
+                    e.preventDefault();
+                    scrollToId(link?.title);
+                    
+                  }}
+                >
+                  {link?.title}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       )}
