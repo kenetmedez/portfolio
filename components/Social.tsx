@@ -1,9 +1,12 @@
 import React from "react";
 import Image from "next/image";
 
-const Social = () => {
+interface SocialProps{
+  id?: string
+}
+const Social = ({id}:SocialProps) => {
   return (
-    <div className="flex flex-row items-center justify-center lg:pr-32 lg:gap-5 gap-2 lg:pb-10 pb-0 animate-pulse">
+    <div id={id} className="flex flex-row items-center justify-center lg:pr-32 lg:gap-5 gap-2 lg:pb-10 pb-0 animate-pulse">
       <a
         href="https://github.com/kenetmedez"
         target="_blank"

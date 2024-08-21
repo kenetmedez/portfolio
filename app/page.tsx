@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 const Home = () => {
 
   return (
-    <div className="overflow-y-hidden">
+    <div className="w-full relative bg-gray-100/50">
       <Navigation />
       <Hero />
       <About />
