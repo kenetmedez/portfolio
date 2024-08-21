@@ -4,7 +4,7 @@ import Social from "./Social";
 
 const Hero = () => {
   return (
-    <section className="relative lg:pt-20 pt-40 pb-2 lg:gap-x-2 w-full flex lg:flex-row md:flex-row lg:justify-center items-center flex-col justify-start bg-gray/100/50">
+    <section className="relative pt-20  pb-2 lg:gap-x-2 w-full flex lg:flex-row md:flex-row lg:justify-center items-center flex-col justify-start bg-gray/100/50">
       <div className="relative lg:w-1/2 flex flex-col lg:justify-end lg:items-end">
         <Image
           src="/boy-using-laptop.png"

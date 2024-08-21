@@ -5,7 +5,8 @@ import Navigation from "@/components/Navigation";
 const Home = () => {
 
   return (
-    <div className="w-full relative bg-gray-100/50">
+    <div className="w-full relative bg-gray-100/50"
+    id="home">
       <Navigation />
       <Hero />
       <About />

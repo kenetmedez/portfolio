@@ -3,6 +3,7 @@ interface NavigationProps {
 }
 
 export const navigation: NavigationProps[] = [
+  { title: "home" },
   { title: "about" },
   { title: "experience" },
   { title: "project" },
