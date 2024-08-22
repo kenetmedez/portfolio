@@ -53,7 +53,7 @@ const Navigation = () => {
                 <a
                   key={link?.title}
                   href={`#${link?.title}`}
-                  className="relative uppercase cursor-pointer after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center font-second tracking-[10px]"
+                  className="relative uppercase cursor-pointer after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center font-second lg:tracking-[.5rem] tracking-normal"
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToId(link?.title);
