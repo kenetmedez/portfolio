@@ -36,7 +36,10 @@ const Navigation = () => {
     <nav className="w-full relative max-w-[1650px] mx-auto">
       <div className="z-50 mx-auto max-w-[1650px] fixed top-0 w-full max-h-lg h-[5rem] flex lg:flex-row justify-between items-center overflow-hidden bg-[#f0a900] font-poppins shadow-lg">
         <div className="lg:w-3/12 md:mx-auto w-1/2 flex flex-row items-center justify-center px-5 ">
-          <Link href="/" className="flex items-start justify-start">
+          <div key="home" className="flex items-start justify-start" id="home"
+          onClick={()=>{
+            scrollToId("home")
+          }}>
             <h1 className="animate-pulse flex flex-row items-center text-2xl text-white font-bold font-papyrus cursor-pointer hover:text-3xl duration-700 p-5">
               <span className="text-[#092635] text-4xl font-second">
                 {`{ }`}{" "}
@@ -44,7 +47,7 @@ const Navigation = () => {
               KENE
               <span className="text-[#092635] font-second">Tech</span>
             </h1>
-          </Link>
+          </div>
         </div>
 
         <div className="lg:w-9/12 lg:flex justify-center mx-auto">
