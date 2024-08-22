@@ -8,15 +8,15 @@ export default function Background() {
       id="about"
     >
       <div className="w-full relative max-w-[1650px] mx-auto">
-        <div className="lg:w-11/12 w-full mx-auto">
+        <div className="lg:w-11/12 md:w-10/12 w-full mx-auto">
           <div className="lg:w-9/12 w-full px-4 mx-auto">
             <div className="header md:mb-10 mb-4">
               <h2 className="font-second text-primary text-3xl">Education</h2>
               <div className="h-[3px] bg-primary w-[50px]" />
             </div>
 
-            <div className="description grid md:grid-cols-3 grid-cols-1 gap-2">
-              <div className="school-background">
+            <div className="description grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2">
+              <div className="school-background mb-4 md:mb-0">
                 <div className="school-name mb-3">
                   <div className="year md:mb-1">
                     <span className="font-second text-black text-md tracking-widest">
@@ -75,13 +75,13 @@ export default function Background() {
               <div className="school_projects">
                 <div className="school_content">
                   <div className="header mb-2">
-                    <span className="font-second text-black text-xl">
+                    <span className="font-second md:text-black text-primary lg:text-xl text-2xl">
                       School Projects
                     </span>
                     <div className="h-[3px] bg-primary md:w-[20px] w-[30px]" />
                   </div>
 
-                  <div>
+                  <div className="project-list lg:ml-0 ml-4 ">
                     <div className="flex flex-row items-center justify-start mb-1 gap-2">
                       {/* <a
                         href=""
@@ -136,7 +136,7 @@ export default function Background() {
               <div className="school_intership">
                 <div className="school_content">
                   <div className="year mb-2">
-                    <span className="font-second text-black text-xl">
+                    <span className="font-second lg:text-black text-primary lg:text-xl text-2xl">
                       Internship
                     </span>
                     <div className="h-[3px] bg-primary md:w-[20px] w-[30px]" />
