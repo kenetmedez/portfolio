@@ -8,11 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary : "#f0a900",
+      },
+
       fontFamily: {
         main: ["Creepster", "system-ui"],
         second: ["Londrina Solid", "sans-serif"],   
         third:["Chakra Petch", 'sans-serif']
       },
+
     },
   },
   plugins: [],

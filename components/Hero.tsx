@@ -16,21 +16,21 @@ const Hero = () => {
         />
         <Social />
       </div>
-
+      
       <div className="lg:w-1/2 w-full flex flex-col lg:justify-items-end justify-center lg:p-0 px-5">
         {information?.map((info, idx) => (
           <div key={idx} className="w-full relative md:pr-10">
-            <h3 className="text-[#f0a900] lg:text-xl text-sm font-second font-bold">
+            <h3 className="text-primary lg:text-xl text-sm font-second font-bold">
               I AM A
             </h3>
-            <h1 className="text-[#f0a900] font-second tracking-widest lg:text-6xl md:text-5xl text-4xl duration-500 font-bold animate-pulse">
+            <h1 className="text-primary font-second tracking-widest lg:text-6xl md:text-5xl text-4xl duration-500 font-bold animate-pulse">
               {info?.position}
             </h1>
             <p className="md:py-4 py-2 text-justify font-poppins md:text-md text-sm font-third">
               {info?.description}
             </p>
             <div className="lg:py-5 pt-1 flex items-center">
-              <button className=" bg-[#CF7500] lg:0rounded-full rounded flex flex-row justify-center items-center px-5 py-3 text-white font-bold text-md  hover:bg-[#000] cursor-pointer group">
+              <button className=" bg-primary lg:0rounded-full rounded flex flex-row justify-center items-center px-5 py-3 text-white font-bold text-md  hover:bg-[#000] cursor-pointer group">
                 <p className="md:text-md text-md font-second tracking-widest">
                   {info?.buttonLabel}
                 </p>
