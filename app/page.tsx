@@ -6,11 +6,11 @@ import Background from "@/components/Background";
 const Home = () => {
 
   return (
-    <div className="w-full relative bg-gray-100/50"
+    <div className="w-full relative bg-gray-100/50 h-fit pt-[5rem]"
     id="home">
       <Navigation />
       <Hero />
-      {/* <Background /> */}
+      <Background />
     </div>
   );
 };

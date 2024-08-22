@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { navigation } from "@/lib/navigation/constants";
 
 const Navigation = () => {
   const [toggleDropdown, setToggleDropdown] = useState(false);
-  const [isLocked, setIsLocked] = useState(false);
+  const [lock, setLock] = useState(false);
 
   function scrollToId(id: string) {
     const element = document.getElementById(id);
@@ -15,25 +15,26 @@ const Navigation = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   }
-  
 
-  function toggleScrollLock(lock: any) {
-    if (lock) {
-      document.body.style.overflow = "hidden"; // Locks the scroll
+  useEffect(() => {
+    if (toggleDropdown) {
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = ""; // Unlocks the scroll
+      document.body.style.overflow = "auto";
     }
-  }
 
-  const handleToggle = () => {
-    const shouldLock = !isLocked;
-    toggleScrollLock(shouldLock);
-    setIsLocked(shouldLock);
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [toggleDropdown]);
+
+  const stopPropagation = (e: any) => {
+    e.stopPropagation();
   };
 
   return (
-    <>
-      <nav className="z-50 fixed top-0 w-full max-h-lg h-[10vh] flex lg:flex-row justify-between items-center overflow-hidden bg-[#f0a900] font-poppins shadow-lg">
+    <nav className="w-full relative max-w-[1650px] mx-auto">
+      <div className="z-50 mx-auto max-w-[1650px] fixed top-0 w-full max-h-lg h-[5rem] flex lg:flex-row justify-between items-center overflow-hidden bg-[#f0a900] font-poppins shadow-lg">
         <div className="lg:w-3/12 md:mx-auto w-1/2 flex flex-row items-center justify-center px-5 ">
           <Link href="/" className="flex items-start justify-start">
             <h1 className="animate-pulse flex flex-row items-center text-2xl text-white font-bold font-papyrus cursor-pointer hover:text-3xl duration-700 p-5">
@@ -65,7 +66,10 @@ const Navigation = () => {
             ))}
           </ul>
 
-          <div className="absolute top-5 right-5 lg:hidden md:flex rounded cursor-pointer hover:bg-[#f1dfb8] z-100">
+          <div
+            className="absolute top-5 right-5 lg:hidden md:flex rounded cursor-pointer hover:bg-[#f1dfb8] z-100"
+            onClick={() => {setToggleDropdown(true)}}
+          >
             <Image
               src={"/menu.png"}
               alt="humberger"
@@ -82,13 +86,11 @@ const Navigation = () => {
             />
           </div>
         </div>
-      </nav>
+      </div>
 
       {toggleDropdown && (
-        <div className="z-50 absolute top-0 left-0 rounded lg:hidden flex w-full h-full bg-[#f0a900]"
-        onClick={handleToggle}
-        >
-          <ul className="w-full p-5 h-screen flex flex-col items-center justify-center font-semibold gap-10">
+        <div className="z-50 absolute top-0 left-0 rounded lg:hidden flex w-full h-full bg-primary">
+          <ul className="w-full p-5 h-screen flex flex-col items-center justify-center font-semibold gap-10 bg-primary">
             {navigation?.map((link, idx) => (
               <li className="hover:text-lg duration-700">
                 <a
@@ -96,10 +98,10 @@ const Navigation = () => {
                   href={`#${link?.title}`}
                   className="relative uppercase cursor-pointer after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center font-second tracking-[10px]"
                   onClick={(e) => {
-                    setToggleDropdown((prev => (!prev)))
+                    setToggleDropdown((prev) => !prev);
                     e.preventDefault();
                     scrollToId(link?.title);
-                    
+                    stopPropagation(e);
                   }}
                 >
                   {link?.title}
@@ -109,7 +111,7 @@ const Navigation = () => {
           </ul>
         </div>
       )}
-    </>
+    </nav>
   );
 };
 
