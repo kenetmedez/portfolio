@@ -2,6 +2,7 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Navigation from "@/components/Navigation";
 import Background from "@/components/Background";
+import Projects from "@/components/Projects";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <main>
         <Hero />
         <Background />
+        <Projects />
       </main>
     </div>
   );
