@@ -36,9 +36,9 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="lg:mt-5 mt-1 flex items-center">
-              <button className=" bg-primary lg:0rounded-full rounded flex flex-row justify-center items-center px-5 py-3 text-white font-bold text-md  hover:bg-[#000] cursor-pointer group">
-                <p className="md:text-md text-md font-second tracking-widest">
+            <div className="lg:mt-5 mt-2 flex items-center">
+              <button className=" bg-primary lg:0rounded-full rounded flex flex-row justify-center items-center md:px-5 px-3 md:py-3 py-2 text-white font-bold text-md  hover:bg-[#000] cursor-pointer group">
+                <p className="text-md font-second tracking-widest">
                   {info?.buttonLabel}
                 </p>
                 <span className="pl-2 duration-500 group-hover:pl-4">
