@@ -74,11 +74,61 @@ export default function Background() {
 
               <div className="school_projects">
                 <div className="school_content">
-                  <div className="year mb-2">
+                  <div className="header mb-2">
                     <span className="font-second text-black text-xl">
                       School Projects
                     </span>
                     <div className="h-[3px] bg-primary md:w-[20px] w-[30px]" />
+                  </div>
+
+                  <div>
+                    <div className="flex flex-row items-center justify-start mb-1 gap-2">
+                      {/* <a
+                        href=""
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-row items-center justify-start mb-1 gap-x-2"
+                      > */}
+                      <h3 className="font-second items-center lg:text-xl text-lg hover:underline">
+                        Capstone
+                      </h3>
+                      <span className="tracking-widest">
+                          &mdash; <span className="font-second">Agrizone</span>
+                        </span>
+                      {/* </a> */}
+                    </div>
+                    
+                    <div className="flex flex-row items-center justify-start mb-1 gap-2">
+                      {/* <a
+                        href=""
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-row items-center justify-start mb-1 gap-x-2"
+                      > */}
+                      <h3 className="font-second items-center lg:text-xl text-lg hover:underline">
+                        Second Year
+                      </h3>
+                      <span className="tracking-widest">
+                          &mdash; <span className="font-second">Cebu Medical Center</span>
+                        </span>
+                      {/* </a> */}
+                    </div>
+
+                    <div className="flex flex-row items-center justify-start mb-1 gap-2">
+                      {/* <a
+                        href=""
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-row items-center justify-start mb-1 gap-x-2"
+                      > */}
+                      <h3 className="font-second items-center lg:text-xl text-lg hover:underline">
+                        First Year
+                      </h3>
+                      <span className="tracking-widest">
+                          &mdash; <span className="font-second">LiBro</span>
+                        </span>
+                      {/* </a> */}
+                    </div>
                   </div>
                 </div>
               </div>
