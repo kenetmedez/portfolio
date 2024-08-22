@@ -4,13 +4,13 @@ import Navigation from "@/components/Navigation";
 import Background from "@/components/Background";
 
 const Home = () => {
-
   return (
-    <div className="w-full relative bg-gray-100/50 h-fit pt-[5rem]"
-    id="home">
+    <div className="w-full relative bg-gray-100/50 h-fit md:pt-[5rem] pt-0" id="home">
       <Navigation />
-      <Hero />
-      <Background />
+      <main>
+        <Hero />
+        <Background />
+      </main>
     </div>
   );
 };

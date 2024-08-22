@@ -5,7 +5,7 @@ import { information } from "@/lib/hero/hero";
 
 const Hero = () => {
   return (
-    <header className="max-w-[1650px] mx-auto relative pt-10  pb-2 lg:gap-x-2 w-full flex lg:flex-row md:flex-row lg:justify-center items-center flex-col justify-start bg-gray-100/50">
+    <header className="cursor-default max-w-[1650px] mx-auto relative  md:pt-10 pt-20 lg:gap-x-2 w-full flex lg:flex-row md:flex-row lg:justify-center items-center flex-col justify-start bg-gray-100/50">
       <div className="relative lg:w-1/2 flex flex-col lg:justify-end lg:items-end">
         <Image
           src="/boy-using-laptop.png"
