@@ -15,7 +15,8 @@ export default function Background() {
             <h3 className="font-second text-xl">Education</h3>
           </div>
 
-          <div className="description grid md:grid-cols-3 grid-cols-1 gap-2">
+          {/* <div className="description grid md:grid-cols-3 grid-cols-1 gap-2"> */}
+          <div className="description w-full flex md:flex-row flex-col md:items-center items-start justify-between gap-2">
             <div className="school-background mb-4 md:mb-0">
               <div className="school-name mb-3">
                 <div className="year md:mb-1">
@@ -83,20 +84,20 @@ export default function Background() {
 
                 <div className="project-list lg:ml-0 ml-4 ">
                   <div className="flex flex-col mb-3">
-                    {/* <a
-                        href=""
+                    <a
+                        href="https://agrizone.vercel.app/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex flex-row items-center justify-start mb-1 gap-x-2"
-                      > */}
+                        className="flex flex-col items-start justify-start mb-1 gap-x-2"
+                      >
                     <h3 className="font-second items-center lg:text-xl text-lg hover:underline">
                       Agrizone &mdash;
                     </h3>
 
-                    <span className="tracking-widest ml-6">
+                    <h2 className="tracking-widest ml-6">
                       <span className="font-second lg:text-sm">Ecommerce</span>
-                    </span>
-                    {/* </a> */}
+                    </h2>
+                    </a>
                   </div>
 
                   <div className="flex flex-col mb-3">
