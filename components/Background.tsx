@@ -9,9 +9,10 @@ export default function Background() {
     >
       <div className="w-full relative max-w-[1650px] mx-auto">
         <div className="lg:max-w-[66%] w-full mx-auto lg:px-0 px-4">
-          <div className="header md:mb-10 mb-4">
-            <h2 className="font-second text-primary text-3xl">Education</h2>
-            <div className="h-[3px] bg-primary w-[50px]" />
+          <div className="header mb-4">
+            <h2 className="font-second text-primary text-3xl">Background</h2>
+            <div className="h-[3px] bg-primary w-[50px] mb-6" />
+            <h3 className="font-second text-xl">Education</h3>
           </div>
 
           <div className="description grid md:grid-cols-3 grid-cols-1 gap-2">
