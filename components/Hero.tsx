@@ -6,7 +6,7 @@ import { information } from "@/lib/hero/hero";
 const Hero = () => {
   return (
     <section
-      className="cursor-default min-h-screen mx-auto relative lg:gap-8 md:gap-2 gap-8 w-full md:pt-0 py-20 flex lg:flex-row md:flex-row lg:justify-center items-center flex-col justify-start bg-gray-100/50"
+      className="cursor-default lg:min-h-screen relative lg:gap-8 md:gap-2 gap-8 w-full md:pt-0 py-20 flex lg:flex-row md:flex-row lg:justify-center items-center flex-col justify-start bg-gray-100/50 max-w-[1280px] mx-auto"
       id="home"
     >
       <div className="relative lg:w-1/2 flex flex-col lg:justify-end lg:items-end rounded-full">

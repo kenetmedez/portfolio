@@ -34,7 +34,7 @@ const Navigation = () => {
 
   return (
     <nav className="w-full relative z-50">
-      <div className="z-50 mx-auto max-w-[1650px] fixed top-0 w-full max-h-lg h-[5rem] flex lg:flex-row justify-between items-center overflow-hidden bg-[#f0a900] font-poppins shadow-lg">
+      <div className="z-50 fixed top-0 w-full max-h-lg h-[5rem] flex lg:flex-row justify-between items-center overflow-hidden bg-[#f0a900] font-poppins shadow-lg">
         <div className="lg:w-3/12 w-1/2 flex flex-row items-center justify-center lg:px-5 ">
           <div
             key="home"

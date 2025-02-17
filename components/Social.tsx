@@ -8,7 +8,7 @@ const Social = ({ id }: SocialProps) => {
   return (
     <div
       id={id}
-      className=" flex flex-row items-center justify-center lg:pr-32 gap-5 lg:pb-10 pb-0 lg:pt-6 pt-4 z-30"
+      className=" flex flex-row items-center justify-center lg:pr-24 gap-5 lg:pb-10 pb-0 lg:pt-6 pt-4 z-30"
     >
       <a
         href="https://www.linkedin.com/in/kenetmedez/"
