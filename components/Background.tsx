@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Background() {
   return (
     <section
-      className="w-full relative bg-gray-100/50 py-10 max-w-[1650px] mx-auto cursor-default scroll-mt-14"
+      className="w-full relative bg-gray-100/50 pb-20 max-w-[1650px] mx-auto cursor-default scroll-mt-14"
       id="about"
     >
       <div className="w-full relative max-w-[1650px] mx-auto">
@@ -85,18 +85,20 @@ export default function Background() {
                 <div className="project-list lg:ml-0 ml-4 ">
                   <div className="flex flex-col mb-3">
                     <a
-                        href="https://agrizone.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex flex-col items-start justify-start mb-1 gap-x-2"
-                      >
-                    <h3 className="font-second items-center lg:text-xl text-lg hover:underline">
-                      Agrizone &mdash;
-                    </h3>
+                      href="https://agrizone.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex flex-col items-start justify-start mb-1 gap-x-2"
+                    >
+                      <h3 className="font-second items-center lg:text-xl text-lg hover:underline">
+                        Agrizone &mdash;
+                      </h3>
 
-                    <h2 className="tracking-widest ml-6">
-                      <span className="font-second lg:text-sm">Ecommerce</span>
-                    </h2>
+                      <h2 className="tracking-widest ml-6">
+                        <span className="font-second lg:text-sm">
+                          Ecommerce
+                        </span>
+                      </h2>
                     </a>
                   </div>
 
@@ -111,7 +113,9 @@ export default function Background() {
                       Cebu Medical Care &mdash;{" "}
                     </h3>
                     <span className="tracking-widest">
-                      <span className="font-second ml-6 lg:text-sm">Hospital Appointment</span>
+                      <span className="font-second ml-6 lg:text-sm">
+                        Hospital Appointment
+                      </span>
                     </span>
                     {/* </a> */}
                   </div>
@@ -124,7 +128,7 @@ export default function Background() {
                         className="flex flex-row items-center justify-start mb-1 gap-x-2"
                       > */}
                     <h3 className="font-second items-center lg:text-xl text-lg hover:underline">
-                      LiBro  &mdash;
+                      LiBro &mdash;
                     </h3>
                     <span className="tracking-widest">
                       <span className="font-second lg:text-sm ml-6">

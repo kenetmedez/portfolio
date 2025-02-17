@@ -33,13 +33,17 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="w-full relative max-w-[1650px] mx-auto">
+    <nav className="w-full relative z-50">
       <div className="z-50 mx-auto max-w-[1650px] fixed top-0 w-full max-h-lg h-[5rem] flex lg:flex-row justify-between items-center overflow-hidden bg-[#f0a900] font-poppins shadow-lg">
         <div className="lg:w-3/12 w-1/2 flex flex-row items-center justify-center lg:px-5 ">
-          <div key="home" className="flex items-start justify-start" id="home"
-          onClick={()=>{
-            scrollToId("home")
-          }}>
+          <div
+            key="home"
+            className="flex items-start justify-start"
+            id="home"
+            onClick={() => {
+              scrollToId("home");
+            }}
+          >
             <h1 className="animate-pulse flex flex-row items-center text-2xl text-white font-bold font-papyrus cursor-pointer hover:text-3xl duration-700 md:p-5 p-2">
               <span className="text-[#092635] md:text-4xl text-3xl font-second">
                 {`{ }`}{" "}
@@ -71,7 +75,9 @@ const Navigation = () => {
 
           <div
             className="absolute top-5 right-5 lg:hidden md:flex rounded cursor-pointer hover:bg-[#f1dfb8] z-100"
-            onClick={() => {setToggleDropdown(true)}}
+            onClick={() => {
+              setToggleDropdown(true);
+            }}
           >
             <Image
               src={"/menu.png"}
